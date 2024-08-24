@@ -4,6 +4,8 @@
     ./bufferline.nix 
     ./lsp.nix
     ./options.nix
+    ./treesitter.nix
+    ./telescope.nix
   ];
 
   colorschemes.base16 ={
