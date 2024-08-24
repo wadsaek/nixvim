@@ -1,3 +1,3 @@
-#NIX!!!!!
+# NIX!!!!!
 my nixvim config!!
 
