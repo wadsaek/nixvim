@@ -1,4 +1,7 @@
 {
+  imports = [
+    ./keymap.nix
+  ]; 
   plugins.lsp = {
     enable = true;
 
