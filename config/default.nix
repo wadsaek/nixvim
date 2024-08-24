@@ -3,6 +3,7 @@
   imports = [ 
     ./bufferline.nix 
     ./lsp.nix
+    ./options.nix
   ];
 
   colorschemes.base16 ={
