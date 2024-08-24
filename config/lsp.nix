@@ -4,12 +4,6 @@
 
     #inlayHints = true; # option doesn't exist?!?!?
     servers = {
-      rust-analyzer = {
-        enable = true;
-	installCargo = true;
-	installRustc = true;
-      };
-
       csharp-ls.enable = true;
       nixd.enable = true;
     };
