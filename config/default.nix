@@ -1,11 +1,11 @@
 {
   # Import all your configuration modules here
   imports = [ 
-    ./bufferline.nix 
     ./lsp/lsp.nix
     ./options.nix
     ./treesitter/treesitter.nix
     ./telescope/telescope.nix
+    ./harpoon/harpoon.nix
   ];
 
   colorschemes.base16 ={
