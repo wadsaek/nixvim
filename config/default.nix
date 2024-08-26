@@ -7,6 +7,7 @@
     ./telescope/telescope.nix
     ./harpoon/harpoon.nix
     ./undotree/undotree.nix
+    ./otter/otter.nix
   ];
 
   colorschemes.base16 ={
