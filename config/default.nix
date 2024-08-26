@@ -1,11 +1,12 @@
 {
   # Import all your configuration modules here
-  imports = [ 
+  imports = [
     ./lsp/lsp.nix
     ./options.nix
     ./treesitter/treesitter.nix
     ./telescope/telescope.nix
     ./harpoon/harpoon.nix
+    ./undotree/undotree.nix
   ];
 
   colorschemes.base16 ={
