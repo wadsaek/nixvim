@@ -1,7 +1,4 @@
 {
-  imports = [
-    ./keymap.nix
-  ]; 
   plugins.lsp = {
     enable = true;
 
@@ -10,18 +7,9 @@
       csharp-ls.enable = true;
       nixd.enable = true;
     };
+
+    keymaps = import ./keymap.nix;
   };
 
   plugins.rustaceanvim.enable = true;
-  
-  plugins.cmp = {
-    enable = true;
-    autoEnableSources = true;
-    settings.sources = [
-      {name = "nvim_lsp";}
-      {name = "path";}
-      {name = "buffer";}
-      {name = "luasnip";}
-    ];
-  };
 }

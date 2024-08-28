@@ -1,5 +1,13 @@
 {
   keymaps = [
-    {key = "<leader>u";action="UndotreeToggle";}
+    {
+      mode = "n";
+      key = "<leader>u";
+      action = "<cmd>UndotreeToggle<CR>";
+      options = {
+        silent = true;
+        desc = "Undotree";
+      };
+    }
   ];
 }

@@ -1,6 +1,7 @@
 {
   # Import all your configuration modules here
   imports = [
+    ./keymap.nix
     ./lsp/lsp.nix
     ./options.nix
     ./treesitter/treesitter.nix
@@ -8,6 +9,7 @@
     ./harpoon/harpoon.nix
     ./undotree/undotree.nix
     ./otter/otter.nix
+    ./cmp/cmp.nix
   ];
 
   colorschemes.base16 ={
