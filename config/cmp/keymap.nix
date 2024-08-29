@@ -1,5 +1,8 @@
 let
   cmap = "cmp.mapping";
 in{
-  "<C-Space>" = "${cmap}.complete()";
+  "<C-Space>" = /*lua*/ "${cmap}.complete()";
+  "<CR>" = /*lua*/ "${cmap}.confirm({select = true})";
+  "<C-j>" = /*lua*/ "${cmap}.select_next_item(cmp_select)";
+  "<C-k>" = /*lua*/ "${cmap}.select_prev_item(cmp_select)";
 }
