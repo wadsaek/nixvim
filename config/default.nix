@@ -1,6 +1,7 @@
 {
   # Import all your configuration modules here
   imports = [
+    ./oil/oil.nix
     ./keymap.nix
     ./lsp/lsp.nix
     ./options.nix
