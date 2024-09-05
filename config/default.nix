@@ -10,6 +10,7 @@
     ./undotree/undotree.nix
     ./otter/otter.nix
     ./autocompletion
+    ./fugitive
   ];
 
   colorschemes.base16 ={
