@@ -3,14 +3,13 @@
   imports = [
     ./oil/oil.nix
     ./keymap.nix
-    ./lsp/lsp.nix
     ./options.nix
     ./treesitter/treesitter.nix
     ./telescope/telescope.nix
     ./harpoon/harpoon.nix
     ./undotree/undotree.nix
     ./otter/otter.nix
-    ./cmp/cmp.nix
+    ./autocompletion
   ];
 
   colorschemes.base16 ={
