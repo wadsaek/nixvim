@@ -11,6 +11,7 @@
     ./otter/otter.nix
     ./autocompletion
     ./fugitive
+    ./bufferline
   ];
 
   colorschemes.base16 ={
