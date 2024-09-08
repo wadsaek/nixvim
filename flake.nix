@@ -22,25 +22,43 @@
         let
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
-          nixvimModule = {
+          mkNixvimModule = {path}: {
             inherit pkgs;
-            module = import ./config; # import the module directly
+            module = import path; # import the module directly
             # You can use `extraSpecialArgs` to pass additional arguments to your module files
             extraSpecialArgs = {
               inherit inputs;
             };
           };
-          nvim = nixvim'.makeNixvimWithModule nixvimModule;
+	  NixvimModule =path: mkNixvimModule {inherit path;};
+          mkNvim = path: nixvim'.makeNixvimWithModule (NixvimModule path);
         in
         {
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
-            default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+            default = nixvimLib.check.mkTestDerivationFromNixvimModule (NixvimModule ./versions/full.nix);
           };
 
-          packages = {
+          packages = rec {
             # Lets you run `nix run .` to start nixvim
-            default = nvim;
+            full = (mkNvim ./versions/full.nix);
+	    rust = (mkNvim ./versions/rust.nix);
+	    dotnet = (mkNvim ./versions/dotnet.nix);
+	    js = (mkNvim ./versions/js.nix);
+	    minimal = (mkNvim ./versions/minimal.nix);
+	    default = minimal;
+	    ccpp = (mkNvim ./versions/ccpp.nix);
+	    go = (mkNvim ./versions/go.nix);
+	    godot = (mkNvim ./versions/godot.nix);
+	    java = (mkNvim ./versions/java.nix);
+	    haskell = (mkNvim ./versions/haskell.nix);
+	    lua = (mkNvim ./versions/lua.nix);
+	    web = (mkNvim ./versions/web.nix);
+	    nix = (mkNvim ./versions/nix.nix);
+	    python = (mkNvim ./versions/python.nix);
+	    nginx = (mkNvim ./versions/nginx.nix);
+	    scripts = (mkNvim ./versions/scripts.nix);
+	    jsPure = (mkNvim ./versions/jsPure.nix);
           };
         };
     };
