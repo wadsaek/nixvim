@@ -10,7 +10,7 @@
     ./undotree/undotree.nix
     ./otter/otter.nix
     ./autocompletion
-    ./fugitive
+    ./git
     ./bufferline
   ];
   options = {
