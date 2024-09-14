@@ -1,2 +1,11 @@
 name: flake update job
-run-name: 
+run-name: ${{ github.actor }} updates the flake
+on: 
+  schedule:
+    - cron: 0 0 */3 * *
+jobs:
+  flakeUpdate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: cachix/install-nix-action@v27
+      - run: nix flake update
