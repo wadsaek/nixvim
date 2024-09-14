@@ -11,5 +11,4 @@ jobs:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v27
       - name: Update Nix Flake Lock
-        uses: DeterminateSystems/update-flake-lock@v24
-
+        run: nix flake update --commit-lock-file
