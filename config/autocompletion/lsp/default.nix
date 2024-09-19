@@ -2,7 +2,7 @@
   plugins.lsp = {
     enable = true;
 
-    #inlayHints = true; # option doesn't exist?!?!?
+    inlayHints = true;
     servers = lib.mkMerge [
       {
         jsonls.enable = true;
@@ -46,7 +46,7 @@
         pyright.enable = true;
       })
       (lib.mkIf config.js.enable {
-        tsserver.enable = true;
+        ts-ls.enable = true;
         eslint.enable = true;
         volar.enable = true;
       })
