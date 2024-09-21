@@ -1,0 +1,5 @@
+{
+  todoTelescope = {
+    key = "<leader>td";
+  };
+}

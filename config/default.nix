@@ -2,6 +2,7 @@
   # Import all your configuration modules here
   imports = [
     ./oil/oil.nix
+    ./todo-comments
     ./keymap.nix
     ./options.nix
     ./treesitter/treesitter.nix
