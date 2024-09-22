@@ -12,6 +12,7 @@
     ./otter/otter.nix
     ./autocompletion
     ./git
+    ./extraFiles
     ./bufferline
   ];
   options = {
