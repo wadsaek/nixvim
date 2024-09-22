@@ -8,6 +8,7 @@
         jsonls.enable = true;
         yamlls.enable = true;
         sqls.enable = true;
+        harper-ls.enable = true;
       }
       (lib.mkIf config.dotnet.enable{
         omnisharp.enable = true;
