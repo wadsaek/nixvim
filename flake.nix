@@ -57,7 +57,7 @@
 	    nix = (mkNvim ./versions/nix.nix);
 	    python = (mkNvim ./versions/python.nix);
 	    nginx = (mkNvim ./versions/nginx.nix);
-	    scripts = (mkNvim ./versions/scripts.nix);
+	    scripting = (mkNvim ./versions/scripting.nix);
 	    jsPure = (mkNvim ./versions/jsPure.nix);
           };
         };
