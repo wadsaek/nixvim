@@ -5,6 +5,7 @@
     ./octo
     ./vim-surround
     ./sleuth
+    ./twilight
     ./oil/oil.nix
     ./todo-comments
     ./keymap.nix
