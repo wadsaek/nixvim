@@ -8,8 +8,6 @@
     ./twilight
     ./oil/oil.nix
     ./todo-comments
-    ./keymap.nix
-    ./options.nix
     ./treesitter/treesitter.nix
     ./telescope/telescope.nix
     ./harpoon/harpoon.nix
@@ -17,7 +15,10 @@
     ./otter/otter.nix
     ./autocompletion
     ./git
+
     ./extraFiles
+    ./keymap.nix
+    ./options.nix
     ./bufferline
   ];
   options = {
