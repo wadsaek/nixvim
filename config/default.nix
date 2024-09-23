@@ -1,8 +1,9 @@
 {lib, config, ...}:{
   # Import all your configuration modules here
   imports = [
-    ./octo
     ./nix-develop
+    ./octo
+    ./vim-surround
     ./oil/oil.nix
     ./todo-comments
     ./keymap.nix
