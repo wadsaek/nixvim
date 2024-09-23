@@ -1,6 +1,7 @@
 {lib, config, ...}:{
   # Import all your configuration modules here
   imports = [
+    ./nix-develop
     ./oil/oil.nix
     ./todo-comments
     ./keymap.nix
