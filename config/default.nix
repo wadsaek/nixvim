@@ -1,6 +1,7 @@
 {lib, config, ...}:{
   # Import all your configuration modules here
   imports = [
+    ./octo
     ./nix-develop
     ./oil/oil.nix
     ./todo-comments
