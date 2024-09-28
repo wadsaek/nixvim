@@ -1,3 +1,8 @@
 {
-  plugins.cmp-nvim-lsp-signature-help.enable = true;
+  plugins.lsp-signature = {
+    enable = true;
+    settings = {
+      select_signature_key = "<C-l>";
+    };
+  };
 }

@@ -7,7 +7,6 @@
       {name = "path";}
       {name = "buffer";}
       {name = "luasnip";}
-      {name = "nvim_lsp_signature_help";}
     ];
     settings.mapping = import ./keymap.nix;
   };
