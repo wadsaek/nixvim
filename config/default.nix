@@ -15,11 +15,11 @@
     ./otter/otter.nix
     ./autocompletion
     ./git
+    ./bufferline
 
     ./extraFiles
     ./keymap.nix
     ./options.nix
-    ./bufferline
   ];
   options = {
     rust.enable = lib.mkEnableOption "rust tools";
