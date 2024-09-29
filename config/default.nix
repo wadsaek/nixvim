@@ -1,6 +1,7 @@
 {lib, config, ...}:{
   # Import all your configuration modules here
   imports = [
+    ./web-devicons
     ./nix-develop
     ./octo
     ./vim-surround
