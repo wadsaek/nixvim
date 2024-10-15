@@ -18,5 +18,6 @@
   globals = {
     mapleader = " ";
   };
+  performance.byteCompileLua.enable = true;
 }
 

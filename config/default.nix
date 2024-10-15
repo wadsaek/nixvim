@@ -17,6 +17,7 @@
     ./autocompletion
     ./git
     ./bufferline
+    ./profiler
 
     ./extraFiles
     ./keymap.nix
