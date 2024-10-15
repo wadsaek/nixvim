@@ -6,7 +6,7 @@
       {name = "nvim_lsp";}
       {name = "path";}
       {name = "buffer";}
-      {name = "luasnip";}
+      #{name = "luasnip";}
     ];
     settings.mapping = import ./keymap.nix;
   };

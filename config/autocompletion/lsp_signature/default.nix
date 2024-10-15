@@ -1,6 +1,6 @@
 {
   plugins.lsp-signature = {
-    enable = true;
+    enable = false;
     settings = {
       select_signature_key = "<C-l>";
     };
