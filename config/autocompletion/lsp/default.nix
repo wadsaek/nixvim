@@ -1,4 +1,4 @@
-{lib, config,...}:{
+{pkgs, lib, config,...}:{
   plugins.lsp = {
     enable = true;
 
@@ -21,7 +21,16 @@
         clangd.enable = true;
       })
       (lib.mkIf config.godot.enable {
-        gdscript.enable = true;
+        gdscript = {
+          enable = true;
+          package = pkgs.gdtoolkit_4;
+          filetypes = [
+            "gd"
+            "gdscript"
+            "gdscript3"
+          ];
+        };
+
       })
       (lib.mkIf config.go.enable {
         gopls.enable = true;
