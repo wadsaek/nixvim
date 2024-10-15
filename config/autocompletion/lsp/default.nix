@@ -34,19 +34,19 @@
       })
       (lib.mkIf config.go.enable {
         gopls.enable = true;
-        golangci-lint-ls.enable = true;
+        golangci_lint_ls.enable = true;
       })
       (lib.mkIf config.haskell.enable{
         hls.enable = true;
       })
       (lib.mkIf config.java.enable{
-        jdt-language-server.enable = true;
+        jdtls.enable = true;
       })
       (lib.mkIf config.lua.enable {
         lua-ls.enable = true;
       })
       (lib.mkIf config.nginx.enable {
-        nginx-language-server.enable = true;
+        nginx_language_server.enable = true;
       })
       (lib.mkIf config.scripting.enable {
         nushell.enable = lib.mkDefault true;
@@ -56,7 +56,7 @@
         pyright.enable = true;
       })
       (lib.mkIf config.js.enable {
-        ts-ls.enable = true;
+        ts_ls.enable = true;
         eslint.enable = true;
         volar.enable = true;
       })
