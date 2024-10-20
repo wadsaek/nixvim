@@ -37,13 +37,16 @@
         golangci_lint_ls.enable = true;
       })
       (lib.mkIf config.haskell.enable{
-        hls.enable = true;
+        hls = {
+          enable = true;
+          installGhc = true;
+        };
       })
       (lib.mkIf config.java.enable{
         jdtls.enable = true;
       })
       (lib.mkIf config.lua.enable {
-        lua-ls.enable = true;
+        lua_ls.enable = true;
       })
       (lib.mkIf config.nginx.enable {
         nginx_language_server.enable = true;
