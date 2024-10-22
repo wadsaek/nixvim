@@ -10,6 +10,7 @@
     ./oil/oil.nix
     ./todo-comments
     ./treesitter/treesitter.nix
+    ./treesitterContext
     ./telescope/telescope.nix
     ./harpoon/harpoon.nix
     ./undotree/undotree.nix
