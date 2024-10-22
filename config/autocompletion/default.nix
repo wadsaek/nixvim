@@ -1,9 +1,10 @@
 {
   imports = [
-    ./lsp_signature
     ./cmp
     ./lsp
-    ./ts-autotag
+    ./lsp_signature
     ./nvim-autopairs
+    ./sleuth
+    ./ts-autotag
   ];
 }

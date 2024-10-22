@@ -6,4 +6,11 @@
       columns = ["icon"];
     };
   };
+  keymaps = [
+    {
+      key = "-";
+      action = "<cmd>Oil<CR>";
+      options.desc = "Oil";
+    }
+  ];
 }

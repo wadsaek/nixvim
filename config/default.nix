@@ -1,22 +1,17 @@
 {lib, config, ...}:{
   # Import all your configuration modules here
   imports = [
-    ./web-devicons
-    ./nix-develop
-    ./octo
-    ./vim-surround
-    ./sleuth
-    ./twilight
-    ./oil/oil.nix
-    ./todo-comments
-    ./treesitter/treesitter.nix
-    ./treesitterContext
-    ./telescope/telescope.nix
-    ./harpoon/harpoon.nix
-    ./undotree/undotree.nix
-    ./otter/otter.nix
     ./autocompletion
     ./git
+    ./navigation
+    ./treesitter
+
+    ./web-devicons
+    ./nix-develop
+    ./vim-surround
+    ./twilight
+    ./undotree
+    ./otter
     ./bufferline
     ./profiler
 

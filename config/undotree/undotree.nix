@@ -1,7 +1,0 @@
-{
-
-  plugins.undotree = {
-    enable = true;
-    
-  };
-}
