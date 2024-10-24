@@ -1,5 +1,7 @@
-{pkgs,lib,...}:{
-  extraPlugins = [(pkgs.vimUtils.buildVimPlugin {
+{ pkgs, lib, ... }:
+{
+  extraPlugins = [
+    (pkgs.vimUtils.buildVimPlugin {
       name = "my-plugin";
       src = pkgs.fetchFromGitHub {
         owner = "stevearc";
@@ -7,7 +9,8 @@
         rev = "0ee32b7aba31d84b0ca76aaff2ffcb11f8f5449f";
         hash = "sha256-usyy1kST8hq/3j0sp7Tpf/1mld6RtcVABPo/ygeqzbU=";
       };
-  })];
+    })
+  ];
   extraConfigLuaPre = ''
     local should_profile = os.getenv("NVIM_PROFILE")
     if should_profile then

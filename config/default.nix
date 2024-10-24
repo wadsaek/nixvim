@@ -1,4 +1,5 @@
-{lib, config, ...}:{
+{ lib, config, ... }:
+{
   # Import all your configuration modules here
   imports = [
     ./autocompletion
@@ -35,7 +36,7 @@
     scripting.enable = lib.mkEnableOption "scripting tools";
     python.enable = lib.mkEnableOption "python tools";
   };
-  config.colorschemes.base16 ={
+  config.colorschemes.base16 = {
     enable = true;
     colorscheme = "rose-pine";
   };

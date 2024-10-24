@@ -1,5 +1,5 @@
 {
-  imports = [../config];
+  imports = [ ../config ];
 
   web.enable = true;
 }

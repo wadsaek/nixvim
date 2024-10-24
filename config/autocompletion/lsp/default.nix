@@ -1,4 +1,10 @@
-{pkgs, lib, config,...}:{
+{
+  pkgs,
+  lib,
+  config,
+  ...
+}:
+{
   plugins.lsp = {
     enable = true;
 
@@ -10,7 +16,7 @@
         sqls.enable = true;
         harper_ls.enable = true;
       }
-      (lib.mkIf config.dotnet.enable{
+      (lib.mkIf config.dotnet.enable {
         omnisharp.enable = true;
         fsautocomplete.enable = true;
       })
@@ -59,13 +65,13 @@
         gopls.enable = true;
         golangci_lint_ls.enable = true;
       })
-      (lib.mkIf config.haskell.enable{
+      (lib.mkIf config.haskell.enable {
         hls = {
           enable = true;
           installGhc = true;
         };
       })
-      (lib.mkIf config.java.enable{
+      (lib.mkIf config.java.enable {
         jdtls.enable = true;
       })
       (lib.mkIf config.lua.enable {
@@ -76,9 +82,9 @@
       })
       (lib.mkIf config.scripting.enable {
         nushell.enable = lib.mkDefault true;
-	pyright.enable = lib.mkDefault true;
+        pyright.enable = lib.mkDefault true;
       })
-      (lib.mkIf config.python.enable{
+      (lib.mkIf config.python.enable {
         pyright.enable = true;
       })
       (lib.mkIf config.js.enable {
