@@ -16,6 +16,29 @@
       })
       (lib.mkIf config.nix.enable {
         nixd.enable = true;
+        nixd.extraOptions = {
+          nixpkgs.expr = "import <nixpkgs> {}";
+          formatting.command = [ "nixfmt" ];
+          options =
+            let
+              flakeExpr = # nix
+                ''
+                  (builtins.getFlake "github:wadsaek/nixos/")
+                '';
+            in
+            {
+              nixos.expr = # nix
+                ''
+                  ${flakeExpr}
+                  .nixosConfiguration.Esther-g3.options
+                '';
+              home_manager.expr = # nix
+                ''
+                  ${flakeExpr}
+                  .homeConfigurations.wadsaek.options
+                '';
+            };
+        };
       })
       (lib.mkIf config.ccpp.enable {
         clangd.enable = true;
