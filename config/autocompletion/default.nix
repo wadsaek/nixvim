@@ -6,5 +6,6 @@
     ./nvim-autopairs
     ./sleuth
     ./ts-autotag
+    ./refactoring
   ];
 }
