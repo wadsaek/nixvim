@@ -12,7 +12,7 @@
         local bufnr = vim.api.nvim_get_current_buf()
         vim.keymap.set(
           "n", 
-          "<leader>co", 
+          "<leader>rco", 
           function()
             vim.cmd.RustLsp('codeAction') -- supports rust-analyzer's grouping
           end,
