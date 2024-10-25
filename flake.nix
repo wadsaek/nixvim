@@ -30,6 +30,7 @@
               # You can use `extraSpecialArgs` to pass additional arguments to your module files
               extraSpecialArgs = {
                 inherit inputs;
+                inherit system;
               };
             };
           NixvimModule = path: mkNixvimModule { inherit path; };

@@ -2,6 +2,7 @@
   pkgs,
   lib,
   config,
+  system,
   ...
 }:
 {
@@ -22,26 +23,36 @@
       })
       (lib.mkIf config.nix.enable {
         nixd.enable = true;
-        nixd.extraOptions = {
+        nixd.settings = {
           nixpkgs.expr = "import <nixpkgs> {}";
           formatting.command = [ "nixfmt" ];
           options =
             let
+              nixvimFlake = # nix
+                ''
+                  (builtins.getFlake "github:wadsaek/nixvim")  
+                '';
               flakeExpr = # nix
                 ''
                   (builtins.getFlake "github:wadsaek/nixos/")
                 '';
+              inherit system;
             in
             {
               nixos.expr = # nix
                 ''
                   ${flakeExpr}
-                  .nixosConfiguration.Esther-g3.options
+                  .nixosConfigurations.Esther-g3.options
                 '';
               home_manager.expr = # nix
                 ''
                   ${flakeExpr}
                   .homeConfigurations.wadsaek.options
+                '';
+              nixvim.expr = # nix
+                ''
+                  ${nixvimFlake}
+                  .packages.${system}.full.options
                 '';
             };
         };

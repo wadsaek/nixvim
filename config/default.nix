@@ -19,6 +19,7 @@
     ./extraFiles
     ./keymap.nix
     ./options.nix
+    ./extraPackages.nix
   ];
   options = {
     rust.enable = lib.mkEnableOption "rust tools";
