@@ -7,5 +7,6 @@
     ./sleuth
     ./ts-autotag
     ./refactoring
+    ./obsidian
   ];
 }
