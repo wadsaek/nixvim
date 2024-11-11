@@ -2,11 +2,14 @@
 {
   # Import all your configuration modules here
   imports = [
+    #collections
     ./autocompletion
     ./git
     ./navigation
     ./treesitter
+    ./rendering
 
+    #plugins
     ./web-devicons
     ./nix-develop
     ./vim-surround
@@ -16,6 +19,7 @@
     ./bufferline
     ./profiler
 
+    #neovim settings
     ./extraFiles
     ./keymap.nix
     ./options.nix
