@@ -12,4 +12,10 @@ jobs:
       - uses: cachix/install-nix-action@v27
       - name: Update Nix Flake Lock
         uses: DeterminateSystems/update-flake-lock@v24
+      - name: Checkout the new branch
+        uses: actions/checkout@v4
+        with: 
+          ref: update_flake_lock_action
+      - name: Build the full flake to see whether there are any errors 
+        run: nix build .#full
 
