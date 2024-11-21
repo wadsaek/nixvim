@@ -7,6 +7,7 @@
     gt = "type_definition";
     "<F10>" = "rename";
     "<leader>co" = "code_action";
+    "<leader>fm" = "format";
   };
   diagnostic = {
     "<leader>j" = "goto_next";
