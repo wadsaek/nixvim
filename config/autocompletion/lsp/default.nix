@@ -34,7 +34,7 @@
       }
       (lib.mkIf config.dotnet.enable {
         omnisharp.enable = true;
-        fsautocomplete.enable = true;
+        fsautocomplete.enable = false;
       })
       (lib.mkIf config.nix.enable {
         nixd.enable = true;
