@@ -38,5 +38,4 @@
     end
     vim.keymap.set("", "<f1>", toggle_profile)
   '';
-  #this is waht haoenbds when u edut stuff
 }
