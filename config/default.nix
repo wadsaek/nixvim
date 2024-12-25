@@ -12,7 +12,7 @@
     #plugins
     ./web-devicons
     ./nix-develop
-    ./vim-surround
+    ./nvim-surround
     ./twilight
     ./undotree
     ./otter
