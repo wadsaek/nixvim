@@ -10,13 +10,11 @@
     ./rendering
 
     #plugins
-    ./web-devicons
     ./nix-develop
     ./nvim-surround
     ./twilight
     ./undotree
     ./otter
-    ./bufferline
     ./profiler
 
     #neovim settings
