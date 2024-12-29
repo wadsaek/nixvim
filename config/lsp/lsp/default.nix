@@ -15,22 +15,7 @@
         jsonls.enable = true;
         yamlls.enable = true;
         sqls.enable = true;
-        harper_ls = {
-          enable = true;
-          package = pkgs.rustPlatform.buildRustPackage{
-            pname = "harper";
-            version = "master";
-
-            src = pkgs.fetchFromGitHub {
-              owner = "elijah-potter";
-              repo = "harper";
-              rev = "6668ee5af96c55610cf6e56c300a697be9321d14";
-              hash = "sha256-wwtdDra1qrb3i03jm/mM5faUGyrxwEc3Opq3qguK360=";
-            };
-
-            cargoHash = "sha256-fMFrd2va1Ko9FWeFmCrjSR96NwDs6egDrteoEwDj/gw=";
-          };
-        };
+        harper_ls.enable = true;
       }
       (lib.mkIf config.dotnet.enable {
         omnisharp.enable = true;

@@ -3,7 +3,7 @@
   # Import all your configuration modules here
   imports = [
     #collections
-    ./autocompletion
+    ./lsp
     ./git
     ./navigation
     ./treesitter
