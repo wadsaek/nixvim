@@ -15,7 +15,13 @@
         jsonls.enable = true;
         yamlls.enable = true;
         sqls.enable = true;
-        harper_ls.enable = true;
+        harper_ls = {
+          settings.harper-ls = {
+            linters.sentence_capitalization = false;
+            isolateEnglish = true;
+          };
+          enable = true;
+        };
       }
       (lib.mkIf config.dotnet.enable {
         omnisharp.enable = true;
