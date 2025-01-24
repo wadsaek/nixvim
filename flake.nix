@@ -8,7 +8,7 @@
   };
 
   outputs =
-    { nixvim, flake-parts, ... }@inputs:
+    { self, nixvim, flake-parts, ... }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
@@ -42,14 +42,14 @@
             default = nixvimLib.check.mkTestDerivationFromNixvimModule (NixvimModule ./versions/full.nix);
           };
 
-          packages = rec {
+          packages = {
             # Lets you run `nix run .` to start nixvim
             full = (mkNvim ./versions/full.nix);
             rust = (mkNvim ./versions/rust.nix);
             dotnet = (mkNvim ./versions/dotnet.nix);
             js = (mkNvim ./versions/js.nix);
             minimal = (mkNvim ./versions/minimal.nix);
-            default = minimal;
+            default = self.packages.${system}.minimal;
             ccpp = (mkNvim ./versions/ccpp.nix);
             go = (mkNvim ./versions/go.nix);
             godot = (mkNvim ./versions/godot.nix);
