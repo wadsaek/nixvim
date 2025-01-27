@@ -14,6 +14,11 @@
     incsearch = true;
 
     scrolloff = 8;
+
+    backup = false;
+    swapfile = false;
+    undodir.__raw = ''os.getenv("HOME") .. "/.cache/undodir"'';
+    undofile = true;
   };
   globals = {
     mapleader = " ";
