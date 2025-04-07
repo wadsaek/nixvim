@@ -11,8 +11,8 @@
   nginx.enable = true;
   scripting.enable = true;
   python.enable = true;
+  ccpp.enable = true;
 
-  ccpp.enable = false;
   go.enable = false;
   java.enable = false;
 }
