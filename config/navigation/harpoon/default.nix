@@ -3,6 +3,6 @@
     enable = true;
     enableTelescope = true;
 
-    keymaps = import ./keymap.nix;
   };
+  keymaps = import ./keymap.nix;
 }
