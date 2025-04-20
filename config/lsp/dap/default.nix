@@ -5,6 +5,12 @@
   ...
 }:
 {
+  imports = [
+    ./dap-ui.nix
+    ./dap-virtual-text.nix
+    ./keymap.nix
+  ];
+
   plugins.dap = {
     enable = true;
     adapters.executables = {
