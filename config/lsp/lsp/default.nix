@@ -24,7 +24,28 @@
         };
       }
       (lib.mkIf config.dotnet.enable {
-        omnisharp.enable = true;
+        omnisharp = {
+          enable = true;
+          settings = {
+            RoslynExtensionsOptions = {
+              inlayHintsOptions = {
+                enableForParameters = true;
+                forLiteralParameters = true;
+                forIndexerParameters = true;
+                forObjectCreationParameters = true;
+                forOtherParameters = true;
+                suppressForParametersThatDifferOnlyBySuffix = true;
+                suppressForParametersThatMatchMethodIntent = true;
+                suppressForParametersThatMatchArgumentName = true;
+                enableForTypes = true;
+                forImplicitVariableTypes = true;
+                forLambdaParameterTypes = true;
+                forImplicitObjectCreation = true;
+              };
+            };
+
+          };
+        };
         fsautocomplete.enable = false;
       })
       (lib.mkIf config.nix.enable {
