@@ -9,7 +9,7 @@
       workspaces = [
         {
           name = "main";
-          path = "~/Documents/writing/obsidian/";
+          path = "~/Documents/obsidian/";
         }
       ];
       attachments = {
