@@ -28,6 +28,7 @@
           enable = true;
           settings = {
             RoslynExtensionsOptions = {
+              EnableDecompilationSupport = true;
               inlayHintsOptions = {
                 enableForParameters = true;
                 forLiteralParameters = true;
