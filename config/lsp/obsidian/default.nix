@@ -1,6 +1,6 @@
 {
   plugins.obsidian = {
-    enable =true;
+    enable =false;
     settings = {
       new_notes_location = "current_dir";
       completion = {
