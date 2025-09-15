@@ -19,6 +19,9 @@
     swapfile = false;
     undodir.__raw = ''os.getenv("HOME") .. "/.cache/undodir"'';
     undofile = true;
+
+    list = true;
+    listchars = "tab:>-,trail:·,extends:◣,precedes:◢";
   };
   globals = {
     mapleader = " ";
