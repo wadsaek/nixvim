@@ -9,6 +9,10 @@
   plugins.lsp = {
     enable = true;
 
+    luaConfig.post = # lua
+      ''
+        vim.diagnostic.config({virtual_lines = true})
+      '';
     inlayHints = true;
     servers = lib.mkMerge [
       {
