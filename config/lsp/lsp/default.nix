@@ -6,14 +6,12 @@
   ...
 }:
 {
-  plugins.lsp = {
-    enable = true;
-
+  lsp = {
+    inlayHints.enable = true;
     luaConfig.post = # lua
       ''
         vim.diagnostic.config({virtual_lines = true})
       '';
-    inlayHints = true;
     servers = lib.mkMerge [
       {
         jsonls.enable = true;
@@ -30,7 +28,7 @@
       (lib.mkIf config.dotnet.enable {
         omnisharp = {
           enable = true;
-          settings = {
+          settings.settings = {
             RoslynExtensionsOptions = {
               EnableDecompilationSupport = true;
               inlayHintsOptions = {
@@ -55,7 +53,7 @@
       })
       (lib.mkIf config.nix.enable {
         nixd.enable = true;
-        nixd.settings = {
+        nixd.settings.settings = {
           nixpkgs.expr = "import <nixpkgs> {}";
           formatting.command = [ "nixfmt" ];
           options =
@@ -96,7 +94,7 @@
         gdscript = {
           enable = true;
           package = pkgs.gdtoolkit_4;
-          filetypes = [
+          settings.filetypes = [
             "gd"
             "gdscript"
             "gdscript3"
@@ -111,7 +109,7 @@
       (lib.mkIf config.haskell.enable {
         hls = {
           enable = true;
-          installGhc = true;
+          settings.installGhc = true;
         };
       })
       (lib.mkIf config.java.enable {
@@ -142,7 +140,7 @@
       })
     ];
 
-    keymaps = import ./keymap.nix;
+    keymaps = import ./keymap.nix { inherit lib; };
   };
 
   plugins.rustaceanvim.enable = lib.mkIf config.rust.enable true;
