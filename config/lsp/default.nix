@@ -9,5 +9,6 @@
     ./ts-autotag
     ./refactoring
     ./obsidian
+    ./roslyn
   ];
 }
