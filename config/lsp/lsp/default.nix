@@ -108,7 +108,7 @@
       (lib.mkIf config.js.enable {
         ts_ls.enable = true;
         eslint.enable = true;
-        volar.enable = true;
+        vue_ls.enable = true;
       })
       (lib.mkIf config.web.enable {
         cssls.enable = true;
