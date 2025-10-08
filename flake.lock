@@ -87,11 +87,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1759733170,
-        "narHash": "sha256-TXnlsVb5Z8HXZ6mZoeOAIwxmvGHp1g4Dw89eLvIwKVI=",
+        "lastModified": 1759831965,
+        "narHash": "sha256-vgPm2xjOmKdZ0xKA6yLXPJpjOtQPHfaZDRtH+47XEBo=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "8913c168d1c56dc49a7718685968f38752171c3b",
+        "rev": "c9b6fb798541223bbb396d287d16f43520250518",
         "type": "github"
       },
       "original": {
@@ -140,11 +140,11 @@
         "systems": "systems_2"
       },
       "locked": {
-        "lastModified": 1759792642,
-        "narHash": "sha256-BPZK3jHFFXWuQFDbR6wG8uIksmStODfwWp2TQEC1NEA=",
+        "lastModified": 1759927289,
+        "narHash": "sha256-EWdwR9l+JG466rPuNmjjzDPvQAuh37lmhgWa2xeaMdk=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "9bdedc05109b44f97cdf757b3910fda8f86bc28d",
+        "rev": "57006a3ace4a3c889ab61b70fd5d8b197de8314e",
         "type": "github"
       },
       "original": {
@@ -186,16 +186,15 @@
     },
     "roslyn-bugfix": {
       "locked": {
-        "lastModified": 1759780523,
-        "narHash": "sha256-GGhaza6P0wQ37FFDeeT7grOKKlLNOrU89Az3181l9aQ=",
-        "owner": "corngood",
+        "lastModified": 1759937567,
+        "narHash": "sha256-v+ZnXM8KxDfSqRYMlrmfmvIyhe+v75bPLw5CfmLH1AM=",
+        "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "ec95e68a73e1862997f5e23a6c9103378c3ebda2",
+        "rev": "7eb19cc8d7d9941f526beaa7df4f40e70564f5f8",
         "type": "github"
       },
       "original": {
-        "owner": "corngood",
-        "ref": "dotnet-crash-fix",
+        "owner": "nixos",
         "repo": "nixpkgs",
         "type": "github"
       }
