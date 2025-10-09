@@ -6,7 +6,7 @@
   ...
 }:
 lib.mkIf config.dotnet.enable {
-  dependencies.roslyn_ls.package = inputs.roslyn-bugfix.legacyPackages.${system}.roslyn-ls;
+  dependencies.roslyn_ls.package = inputs.nixpkgs-master.legacyPackages.${system}.roslyn-ls;
   plugins.roslyn =
     let
       lspSettings = # lua

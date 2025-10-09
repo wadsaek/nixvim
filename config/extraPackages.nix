@@ -3,7 +3,7 @@
     pkgs.nixfmt-rfc-style
     pkgs.jq
   ] ++ lib.optional config.dotnet.enable (pkgs.dotnetCorePackages.combinePackages [
-    inputs.roslyn-bugfix.legacyPackages.${system}.dotnetCorePackages.sdk_10_0
+    inputs.nixpkgs-master.legacyPackages.${system}.dotnetCorePackages.sdk_10_0
     pkgs.dotnetCorePackages.sdk_9_0
     pkgs.dotnetCorePackages.sdk_8_0
   ]);

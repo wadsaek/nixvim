@@ -116,6 +116,21 @@
         "type": "github"
       }
     },
+    "nixpkgs-master": {
+      "locked": {
+        "lastModified": 1760036653,
+        "narHash": "sha256-FJOwW7YMxtnMi3R+MxwiVsUsrOtm3ubIBo8Jdc1nH6w=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "b6bae5b8d26ef00d8df42206ac24d0665640286b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1759632233,
@@ -180,23 +195,8 @@
       "inputs": {
         "flake-parts": "flake-parts",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim",
-        "roslyn-bugfix": "roslyn-bugfix"
-      }
-    },
-    "roslyn-bugfix": {
-      "locked": {
-        "lastModified": 1759937567,
-        "narHash": "sha256-v+ZnXM8KxDfSqRYMlrmfmvIyhe+v75bPLw5CfmLH1AM=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "7eb19cc8d7d9941f526beaa7df4f40e70564f5f8",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "type": "github"
+        "nixpkgs-master": "nixpkgs-master",
+        "nixvim": "nixvim"
       }
     },
     "systems": {
