@@ -20,7 +20,7 @@
       {
         mode = "n";
         key = "<leader>?";
-        action.__raw = "function() ${ui}.eval(false, {enter = true })() end";
+        action.__raw = "function() ${ui}.eval(false, {enter = true }) end";
         options.desc = "evaluate expression under the cursor";
       }
       {
