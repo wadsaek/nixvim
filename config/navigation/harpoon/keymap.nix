@@ -19,6 +19,6 @@ in
   }
   (navFile 1 "<C-j>")
   (navFile 2 "<C-k>")
-  (navFile 3 "<C-n>")
-  (navFile 4 "<C-m>")
+  (navFile 3 "<C-l>")
+  (navFile 4 "<C-:>")
 ]
