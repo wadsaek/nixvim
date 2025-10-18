@@ -22,6 +22,8 @@
 
     list = true;
     listchars = "tab:>-,trail:·,extends:◣,precedes:◢";
+
+    winborder = "rounded";
   };
   globals = {
     mapleader = " ";
