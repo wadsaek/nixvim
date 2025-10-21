@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   plugins.cmp = {
     enable = true;
@@ -10,5 +11,13 @@
       { name = "nvim_lsp_signature_help"; }
     ];
     settings.mapping = import ./keymap.nix;
+    settings.window =
+      let
+        bordered = lib.nixvim.mkRaw "require'cmp'.config.window.bordered({})";
+      in
+      {
+        completion = bordered;
+        documentation = bordered;
+      };
   };
 }
