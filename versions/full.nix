@@ -12,6 +12,7 @@
   scripting.enable = true;
   python.enable = true;
   ccpp.enable = true;
+  lua.enable = true;
 
   go.enable = false;
   java.enable = false;
