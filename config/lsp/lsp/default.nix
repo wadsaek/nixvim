@@ -18,7 +18,7 @@
         yamlls.enable = true;
         sqls.enable = true;
         harper_ls = {
-          settings.harper-ls = {
+          config.harper-ls = {
             linters.sentence_capitalization = false;
             isolateEnglish = true;
           };
@@ -30,7 +30,7 @@
       })
       (lib.mkIf config.nix.enable {
         nixd.enable = true;
-        nixd.settings.settings = {
+        nixd.config.settings = {
           nixpkgs.expr = "import <nixpkgs> {}";
           formatting.command = [ "nixfmt" ];
           options =
@@ -71,7 +71,7 @@
         gdscript = {
           enable = true;
           package = pkgs.gdtoolkit_4;
-          settings.filetypes = [
+          config.filetypes = [
             "gd"
             "gdscript"
             "gdscript3"
@@ -86,7 +86,7 @@
       (lib.mkIf config.haskell.enable {
         hls = {
           enable = true;
-          settings.installGhc = true;
+          config.installGhc = true;
         };
       })
       (lib.mkIf config.java.enable {
