@@ -50,7 +50,7 @@
             '';
           }
           {
-            inherit type env cwd;
+            inherit type cwd;
             name = "attach - netcoredbg";
             request = "attach";
             processId = lib.nixvim.mkRaw "require('dap.utils').pick_process";
