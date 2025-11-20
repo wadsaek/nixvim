@@ -1,17 +1,30 @@
 {
-  system,
-  inputs,
   config,
   lib,
   ...
 }:
 lib.mkIf config.dotnet.enable {
-  dependencies.roslyn_ls.package = inputs.nixpkgs-master.legacyPackages.${system}.roslyn-ls;
-  plugins.roslyn =
-    let
-      lspSettings = # lua
-        ''
-          {
+  plugins.rzls = {
+    enable = true;
+  };
+  plugins.roslyn = {
+    enable = true;
+    luaConfig.post =
+      let
+        rzls = config.dependencies.rzls.package;
+      in
+      ''
+        vim.lsp.config("roslyn",{
+          cmd = {
+                  "Microsoft.CodeAnalysis.LanguageServer",
+                  "--stdio",
+                  "--logLevel=Information",
+                  "--extensionLogDirectory=" .. vim.fs.dirname(vim.lsp.get_log_path()),
+                  "--razorSourceGenerator=${rzls}/lib/rzls/Microsoft.CodeAnalysis.Razor.Compiler.dll",
+                  "--razorDesignTimePath=${rzls}/lib/rzls/Targets/Microsoft.NET.Sdk.Razor.DesignTime.targets"
+              },
+              handlers = require("rzls.roslyn_handlers"),
+          settings = {
             ["csharp|inlay_hints"] = {
               csharp_enable_inlay_hints_for_implicit_object_creation = true,
               csharp_enable_inlay_hints_for_implicit_variable_types = true,
@@ -29,16 +42,9 @@ lib.mkIf config.dotnet.enable {
               dotnet_show_completion_items_from_unimported_namespaces = true,
             },
           }
-        '';
-    in
-    {
-      enable = true;
-      luaConfig.post = # lua
-        ''
-          vim.lsp.config("roslyn",{
-          settings = ${lspSettings}
-          })
-        '';
+        })
+        vim.lsp.enable("roslyn")
+      '';
 
-    };
+  };
 }
