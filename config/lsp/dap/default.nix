@@ -21,19 +21,41 @@
       };
     };
     configurations = {
-      cs = lib.mkIf config.dotnet.enable [
-        {
+      cs =
+        let
           type = "coreclr";
-          name = "launch - netcoredbg";
-          request = "launch";
-          program.__raw = # lua
-            ''
+          env = {
+            ASPNETCORE_ENVIRONMENT = "Development";
+            ASPNETCORE_URLS = lib.nixvim.mkRaw ''
+              function()
+                  return 'http://localhost:' .. vim.fn.input('Port: ', "5000")
+              end
+            '';
+          };
+          cwd = lib.nixvim.mkRaw ''
+            function()
+              return vim.fn.getcwd()
+            end
+          '';
+        in
+        lib.mkIf config.dotnet.enable [
+          {
+            inherit type env cwd;
+            name = "launch - netcoredbg";
+            request = "launch";
+            program = lib.nixvim.mkRaw ''
               function()
                   return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
               end
             '';
-        }
-      ];
+          }
+          {
+            inherit type env cwd;
+            name = "attach - netcoredbg";
+            request = "attach";
+            processId = lib.nixvim.mkRaw "require('dap.utils').pick_process";
+          }
+        ];
     };
   };
 }
