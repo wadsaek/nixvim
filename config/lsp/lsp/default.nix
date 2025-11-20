@@ -26,7 +26,7 @@
         };
       }
       (lib.mkIf config.dotnet.enable {
-        fsautocomplete.enable = false;
+        fsautocomplete.enable = true;
       })
       (lib.mkIf config.nix.enable {
         nixd.enable = true;
