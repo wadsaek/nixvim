@@ -16,6 +16,7 @@
     ./undotree
     ./otter
     ./profiler
+    ./fire
 
     #neovim settings
     ./extraFiles
