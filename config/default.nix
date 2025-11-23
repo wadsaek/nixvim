@@ -8,6 +8,7 @@
     ./navigation
     ./treesitter
     ./rendering
+    ./mini
 
     #plugins
     ./nix-develop
