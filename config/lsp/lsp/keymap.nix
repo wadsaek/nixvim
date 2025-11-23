@@ -4,25 +4,21 @@
     key = "K";
     lspBufAction = "hover";
   }
-  {
-    key = "gD";
-    lspBufAction = "references";
-  }
-  {
-    key = "gd";
-    lspBufAction = "definition";
-  }
-  {
-    key = "gi";
-    lspBufAction = "implementation";
-  }
+  # {
+  #   key = "gD";
+  #   lspBufAction = "references";
+  # }
+  # {
+  #   key = "gd";
+  #   lspBufAction = "definition";
+  # }
+  # {
+  #   key = "gi";
+  #   lspBufAction = "implementation";
+  # }
   {
     key = "gt";
     lspBufAction = "type_definition";
-  }
-  {
-    key = "<F10>";
-    lspBufAction = "rename";
   }
   {
     key = "<leader>co";
