@@ -1,9 +1,8 @@
+{ lib, ... }:
 {
   plugins.treesitter = {
     enable = true;
-    settings = {
-      ensure_installed = "all";
-      highlight.enable = true;
-    };
+    highlight.enable = true;
+    indent.enable = true;
   };
 }
