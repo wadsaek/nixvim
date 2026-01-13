@@ -29,18 +29,18 @@
           nixvimLib = nixvim.lib.${system};
           nixvim' = nixvim.legacyPackages.${system};
           mkNixvimModule =
-            { path }:
+            { modulePath }:
             {
-              inherit pkgs;
-              module = import path; # import the module directly
+              inherit system;
+              module = import modulePath; # Import the module directly
               # You can use `extraSpecialArgs` to pass additional arguments to your module files
               extraSpecialArgs = {
                 inherit inputs;
                 inherit system;
               };
             };
-          NixvimModule = path: mkNixvimModule { inherit path; };
-          mkNvim = path: nixvim'.makeNixvimWithModule (NixvimModule path);
+          NixvimModule = modulePath: mkNixvimModule { inherit modulePath; };
+          mkNvim = modulePath: nixvim'.makeNixvimWithModule (NixvimModule modulePath);
         in
         {
           checks = {
