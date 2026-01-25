@@ -24,6 +24,7 @@
           };
           enable = true;
         };
+        tinymist.enable = true;
       }
       (lib.mkIf config.dotnet.enable {
         fsautocomplete.enable = true;
