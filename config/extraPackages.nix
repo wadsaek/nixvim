@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   extraPackages = [
-    pkgs.nixfmt-rfc-style
+    pkgs.nixfmt
     pkgs.jq
   ];
 }
