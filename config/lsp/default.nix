@@ -10,5 +10,6 @@
     ./refactoring
     ./obsidian
     ./roslyn
+    ./typst-preview
   ];
 }
