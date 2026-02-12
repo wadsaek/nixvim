@@ -45,6 +45,7 @@
     enable = true;
     colorscheme = "rose-pine";
   };
+  config.plugins.colorizer.enable = true;
   config.nixpkgs.config.allowUnfree = true;
   config.web.enable = lib.mkDefault config.js.enable;
 }
