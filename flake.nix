@@ -6,6 +6,10 @@
     nixvim.url = "github:nix-community/nixvim";
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixpkgs-master.url = "github:nixos/nixpkgs";
+    zspher-dotfiles = {
+      url = "github:zspher/dotfiles";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
