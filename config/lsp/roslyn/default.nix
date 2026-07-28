@@ -63,7 +63,7 @@ lib.mkIf config.dotnet.enable {
               },
             }
           })
-          vim.lsp.enable("roslyn")
+          -- vim.lsp.enable("roslyn")
         '';
 
     };
